@@ -180,9 +180,7 @@
     BOOL removeJailbreakEnabled = [[DOPreferenceManager sharedManager] boolPreferenceValueForKey:@"removeJailbreakEnabled" fallback:NO];
 
     NSString *jailbreakButtonTitle = DOLocalizedString(@"Button_Jailbreak_Title");
-    if (!isSupported)
-        jailbreakButtonTitle = DOLocalizedString(@"Unsupported");
-    else if (isJailbroken)
+    if (isJailbroken)
         jailbreakButtonTitle = DOLocalizedString(@"Status_Title_Jailbroken");
     else if (removeJailbreakEnabled)
         jailbreakButtonTitle = DOLocalizedString(@"Button_Remove_Jailbreak");
